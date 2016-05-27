@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+	<meta charset="utf-8">
+	<title>Alta Cajero</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div id="login">
+
+		<h2><span class="fontawesome-lock"></span>Alta Cajeros</h2>
+
+		<form action="javascript:void(0);" method="POST"> 
+            
+			<fieldset>
+                <p><label for="NomSuc">Nombre</label></p>
+                <p><input type="email" id="NomSuc" value="Nombre Cajero" onBlur="if(this.value=='')this.value='NomSuc'" onFocus="if(this.value=='NomSuc')this.value=''"></p>
+                
+                <p><label for="Del">Genero</label></p>
+                <select name = "Estado">
+                    <option value="Guerrero">Masculino</option>
+                    <option value="Durango">Femenino</option>
+                </select>
+                
+                <p><label for="Edad">Edad</label></p>
+                <p><input type="email" id="Edad" value="Edad" onBlur="if(this.value=='')this.value='Edad'" onFocus="if(this.value=='Edad')this.value=''"></p>
+
+				<p><input type="submit" value="Registrar"></p>
+
+			</fieldset>
+
+		</form>
+
+	</div>
+</body>	
+</html>

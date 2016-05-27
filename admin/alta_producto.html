@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+	<meta charset="utf-8">
+	<title>Alta Producto</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div id="login">
+
+		<h2><span class="fontawesome-lock"></span>Alta Producto</h2>
+
+		<form action="javascript:void(0);" method="POST"> 
+            
+			<fieldset>
+				<p><label for="email">Nombre:</label></p>
+                
+				<p><input type="email" id="email" value="No.Trabajador" onBlur="if(this.value=='')this.value='No.Trabajador'" onFocus="if(this.value=='No.Trabajador')this.value=''"></p>
+
+				<p><label for="password">Linea</label></p>
+                <select name = "Estado">
+                    <option value="Guerrero">Blanca</option>
+                    <option value="Durango">Comida</option>
+                    <option value="Veracruz">Ropa</option>
+                </select>
+                
+                <p><label for="PrecioLb">Precio</label></p>
+                
+                <p><input type="email" id="password" value="Precio" onBlur="if(this.value=='')this.value='password'" onFocus="if(this.value=='password')this.value=''"></p>
+                
+                <p><label for="ExistenciasLb">Existencias</label></p>
+                <p><input type="email" id="Exi" value="Existencias" onBlur="if(this.value=='')this.value='Exi'" onFocus="if(this.value=='Exi')this.value=''"></p>
+                
+				<p><input type="submit" value="Registrar"></p>
+
+			</fieldset>
+
+		</form>
+
+	</div>
+</body>	
+</html>

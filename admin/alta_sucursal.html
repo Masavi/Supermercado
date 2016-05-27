@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+	<meta charset="utf-8">
+	<title>Alta Sucursal</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<div id="login">
+
+		<h2><span class="fontawesome-lock"></span>Administracion General</h2>
+
+		<form action="javascript:void(0);" method="POST"> 
+            
+			<fieldset>
+                
+                <p><label for="NomSuc">**Sucursal**</label></p>
+                <p><label for="NomSuc">Nombre</label></p>
+                <p><input type="email" id="NomSuc" value="Nombre Sucursal" onBlur="if(this.value=='')this.value='NomSuc'" onFocus="if(this.value=='NomSuc')this.value=''"></p>
+                
+                <p><label for="Dir">Direccion</label></p>
+                <p><input type="email" id="Dir" value="Direccion" onBlur="if(this.value=='')this.value='Dir'" onFocus="if(this.value=='Dir')this.value=''"></p>
+                
+                <p><label for="Del">Delegacion</label></p>
+                <select name = "Estado">
+                    <option value="Cuajimalpa">Cuajimalpa</option>
+                    <option value="Cuahutemoc">Cuahutemoc</option>
+                    <option value="Alvaro Obregon">Alvaro Obregon</option>
+                </select>
+                
+                <p><label for="Est">Estado</label></p>
+                <select name = "Estado">
+                    <option value="Durango">Durango</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                </select>
+
+				<p><input type="submit" value="Registrar"></p>
+
+			</fieldset>
+
+		</form>
+
+	</div>
+</body>	
+</html>
