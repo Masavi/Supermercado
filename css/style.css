@@ -25,14 +25,6 @@ input {
 }
 
 /* ---------- LOGIN ---------- */
-#InAdmin{
-    text-align: center;
-    margin: 50px auto;
-	width: 400px;
-}
-#InAdmin h1{
-    font-size: 30px;
-}
 
 #login{
 	margin: 50px auto;
