@@ -1,0 +1,88 @@
+h2{
+   font-size: 100%;
+    font-family: sans-serif;
+}
+.titulo{
+    font-size: 200%;
+    padding: 50px 20px;
+    background-color:#FF9D4D;
+    color: aliceblue;
+    text-align: center;
+    font-family: sans-serif;
+}
+/* --------------Este es un comentario en CSS --------------*/
+.flat-table {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 80%;
+  height: 150px;
+  width: 640px;
+  overflow: auto;
+}
+.flat-table th {
+  background-color:firebrick;
+  color: white;
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+}
+.flat-table td {
+  background-color: #eeeeee;
+  color: #6f6f6f;
+  padding: 10px 40px;
+    
+}
+
+/* --------------Este es un comentario en CSS --------------*/
+
+.flat-table2 {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 80%;
+  height: 150px;
+  width: 550px;
+  overflow: auto;
+}
+.flat-table2 th {
+  background-color:#70c469;
+  color: white;
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+}
+.flat-table2 td {
+  background-color: #eeeeee;
+  color: #6f6f6f;
+  padding: 10px 40px;
+}
+
+/*-------------- Este es un comentario en CSS --------------*/
+.flat-table3 {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  font-size: 80%;
+  height: 150px;
+  width: 610px;
+  overflow: auto;
+}
+.flat-table3 th {
+  background-color:#0088FF;
+  color: white;
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+}
+.flat-table3 td {
+  background-color: #eeeeee;
+  color: #6f6f6f;
+  padding: 10px 40px;
+}
+
+/*-------------- Este es un comentario en CSS --------------*/
+#cont{
+    margin-top: 40px;
+}
