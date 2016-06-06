@@ -3,7 +3,7 @@
     
 <head>
 	<meta charset="utf-8">
-	<title>Login</title>
+	<title>Iniciar Sesión</title>
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 
