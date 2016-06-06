@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	require_once('db.class.php');
-	require_once('carrito.class.php');
 	$db = new database();
 ?>
 
@@ -9,7 +8,7 @@
 <html>
 <head>
 <head>
-	<title>Validando...</title>
+	<title>Validación en curso</title>
 	<meta charset="utf-8">
 </head>
 </head>

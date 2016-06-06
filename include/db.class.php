@@ -6,7 +6,7 @@ class database{
 
     public function __construct(){
         $path = realpath($_SERVER['DOCUMENT_ROOT'].'/../'); // Configracion fuera de webroot
-        $config = parse_ini_file($path.'../super_config.ini'); // Configuracion
+        $config = parse_ini_file($path.'/super_config.ini'); // Configuracion
 
         // Database Source Name
         $dsn = 'mysql:host=' . $config['host'] . ';dbname=' . $config['dbname'].';charset=utf8';
