@@ -16,15 +16,15 @@
 <body>
 	<div id="login">
 		<h2><span class="fontawesome-lock"></span>Iniciar Sesión</h2>
-		<form action="javascript:void(0);" method="POST">             
+		<form method="post" action="login_validation.php">             
 			<fieldset>
-				<p><label for="email">Usuario</label></p>
-				<p><input type="email" id="email" value="No.Trabajador" onBlur="if(this.value=='')this.value='No.Trabajador'" onFocus="if(this.value=='No.Trabajador')this.value=''"></p>
+				<p><label for="email">Correo Electrónico</label></p>
+				<p><input type="email" id="email" name="email" required></p>
                 
 				<p><label for="password">Contraseña</label></p>               
-				<p><input type="password" id="password" value="password" onBlur="if(this.value=='')this.value='password'" onFocus="if(this.value=='password')this.value=''"></p>
+				<p><input type="password" id="password" name="password" required></p>
                 
-				<p><input type="submit" value="Ingresar"></p>
+				<p><input type="submit" name="login" value="Ingresar"></p>
 			</fieldset>
 		</form>
 	</div>

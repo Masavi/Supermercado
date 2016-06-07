@@ -14,25 +14,30 @@
 </head>
 <body>
 		<?php
-			if(isset($_POST['login'])){
-				$correo = 
+			if(isset($_POST['login']))
+            {
+				$correo = $_POST['email'];
 				$password = $_POST['password'];
-				$db -> query("SELECT * FROM usuarios WHERE correo=:correo AND pass=:pass");
+				$db -> query("SELECT * FROM cajero WHERE correo=:correo AND pass=:pass");
 				$db->bind(':correo', $_POST['email']);
 				$db->bind(':pass', $_POST['password']);
-				$result = $db->resultset();
-				if (!empty($result)) {
-					$_SESSION["email"] = $result[0]['correo']; 
-					$_SESSION["nombre"] = $result[0]['nombre'];
-					$_SESSION["carrito"] = serialize(new carrito());
+				$result = $db->single();
+
+				if (!empty($result)) 
+                {
+					$_SESSION["email"] = $result['correo']; 
+					$_SESSION["nombre"] = $result['nombre'];
 					echo 'Iniciando sesión para '.$_SESSION['correo'].' <p>';
-					echo '<script> window.location="resumen.php"; </script>';
+					echo '<script> window.location="index.php"; </script>';
 				}
 				
-				else{
-					echo '<script> alert("El correo electrónico y/o la contraseña que ingresaste no coinciden con niguna cuenta. Regístrate para crear una cuenta.");</script>';
+				else
+                {
+					echo '<script> alert("El correo electrónico y/o la contraseña que ingresaste no coinciden con niguna cuenta. Comunícate con un supervisor si necesitas ayuda para iniciar sesión.");</script>';
 					echo '<script> window.location="login.php"; </script>';
+                 
 				}
+                
 			}
 		?>	
 </body>

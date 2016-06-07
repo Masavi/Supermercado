@@ -1,10 +1,10 @@
-﻿1) Diagrama Entidad-Relación
+1) Diagrama Entidad-Relación
 2) Diagrama Relacional
 3) Diccionario de Datos {Describir cada atributo de la base de datos y c/u de las tablas}
 4) Script de la Base de Datos
 5) 5 Consultas reportes {Store Procedure} ; Sistema: Cajero
 	i) Ventas totales por mes
-	ii) Ventas por perdio por cajero
+	ii) Ventas por periodo por cajero
 	iii) Ventas por determinado producto
 	iv) Listados de productos que más se venden
 6) 3 Usuarios ; 3 gerentes (con diferentes permisos)
