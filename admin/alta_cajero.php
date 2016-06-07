@@ -18,6 +18,6 @@
 		$db->execute();
         
         echo '<script> alert("Has agregado un cajero exitosamente.");</script>';
-		echo '<script> window.location="/admin/alta_cajero.php"; </script>';
+		echo '<script> window.location="/admin/alta_cajero.html"; </script>';
 	}
 ?>
