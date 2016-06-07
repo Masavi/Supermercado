@@ -9,6 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Inicio</title>
+    <link rel="shortcut icon" href="/favicon.ico">
 	<link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     

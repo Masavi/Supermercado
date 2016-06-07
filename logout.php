@@ -8,6 +8,7 @@ echo '<script> window.location="/"; </script>';
 <html>
 <head>
 	<title>Cerrando Sesión</title>
+    <link rel="shortcut icon" href="/favicon.ico">
 	<meta charset="utf-8">
 </head>
 <body>

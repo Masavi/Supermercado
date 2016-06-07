@@ -10,6 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mostrar Informacion</title>
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/estilo.css">
 </head>
     

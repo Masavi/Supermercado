@@ -9,6 +9,7 @@
 <head>
 <head>
 	<title>Validación en curso</title>
+    <link rel="shortcut icon" href="/favicon.ico">
 	<meta charset="utf-8">
 </head>
 </head>
