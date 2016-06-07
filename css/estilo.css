@@ -17,8 +17,9 @@ h2{
   -webkit-font-smoothing: antialiased;
   font-size: 80%;
   height: 150px;
-  width: 640px;
+  width: 90em;
   overflow: auto;
+    text-align: center;
 }
 .flat-table th {
   background-color:firebrick;
@@ -42,8 +43,9 @@ h2{
   -webkit-font-smoothing: antialiased;
   font-size: 80%;
   height: 150px;
-  width: 550px;
+  width: 79em;
   overflow: auto;
+  text-align: center;
 }
 .flat-table2 th {
   background-color:#70c469;
@@ -63,10 +65,10 @@ h2{
   display: block;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
-
+text-align: center;
   font-size: 80%;
   height: 150px;
-  width: 610px;
+  width: 65em;
   overflow: auto;
 }
 .flat-table3 th {
@@ -85,4 +87,14 @@ h2{
 /*-------------- Este es un comentario en CSS --------------*/
 #cont{
     margin-top: 40px;
+    
+}
+
+#cont h2{
+    text-align: center;
+}
+
+#cont table{
+    margin-left: auto;
+    margin-right: auto;
 }

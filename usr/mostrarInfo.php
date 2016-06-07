@@ -20,7 +20,7 @@
 <div id = cont>
     
     <h2>Sucursales</h2>
-    <table class="flat-table">
+    <table align="center" class="flat-table">
       <tbody>
         <tr>
           <th>id</th>

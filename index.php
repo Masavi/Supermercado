@@ -59,25 +59,29 @@
                 echo'<a href = "/admin/agregar_sucursal.php">Agregar Sucursal </a><br><br>';
                 echo'<a href = "/admin/agregar_producto.php">Agregar Producto</a><br><br>';
                 echo'<a href="/admin/agregar_cajero.php">Agregar Cajero</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Mostrar Registros</a><br><br>';
+                echo'<a href="/usr/consultas.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
                 else if($_SESSION['permiso']==2)
                 { 
                 echo'<a href = "/admin/agregar_producto.php">Agregar Producto</a><br><br>';
                 echo'<a href="/admin/agregar_cajero.php">Agregar Cajero</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Mostrar Registros</a><br><br>';
+                echo'<a href="/usr/consultas.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
                 else if($_SESSION['permiso']==3)
                 { 
                 echo'<a href = "/admin/agregar_producto.php">Agregar Producto</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Mostrar Registros</a><br><br>';
+                echo'<a href="/usr/consultas.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
                 else if($_SESSION['permiso']==4)
                 { 
-                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Mostrar Registros</a><br><br>';
+                echo'<a href="/usr/consultas.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
             ?>
