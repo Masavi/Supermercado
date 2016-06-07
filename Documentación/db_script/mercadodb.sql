@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `caja`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `caja` (
-  `id_caja` int(11) NOT NULL AUTO_INCREMENT,
+  `id_caja` int(11) NOT NULL,
   `tipo_caja` varchar(50) NOT NULL,
   `id_cajero` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_caja`),
@@ -58,7 +58,7 @@ CREATE TABLE `cajero` (
   PRIMARY KEY (`id_cajero`),
   KEY `id_venta` (`id_venta`),
   CONSTRAINT `cajero_ibfk_1` FOREIGN KEY (`id_venta`) REFERENCES `venta` (`id_venta`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,6 +67,7 @@ CREATE TABLE `cajero` (
 
 LOCK TABLES `cajero` WRITE;
 /*!40000 ALTER TABLE `cajero` DISABLE KEYS */;
+INSERT INTO `cajero` VALUES (1,'jjjnkj','M',12,NULL,'jkjjkjkkj@jdjkd.com');
 /*!40000 ALTER TABLE `cajero` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,7 +79,7 @@ DROP TABLE IF EXISTS `corporativo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `corporativo` (
-  `id_corporativo` int(11) NOT NULL AUTO_INCREMENT,
+  `id_corporativo` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `direccion` varchar(300) NOT NULL,
   PRIMARY KEY (`id_corporativo`)
@@ -91,6 +92,7 @@ CREATE TABLE `corporativo` (
 
 LOCK TABLES `corporativo` WRITE;
 /*!40000 ALTER TABLE `corporativo` DISABLE KEYS */;
+INSERT INTO `corporativo` VALUES (1,'RGBA','2da Cerrada Calle 10 #238 Granjas San Antonio Iztapalapa');
 /*!40000 ALTER TABLE `corporativo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +104,7 @@ DROP TABLE IF EXISTS `delegacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `delegacion` (
-  `id_delegacion` int(11) NOT NULL AUTO_INCREMENT,
+  `id_delegacion` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `id_estado` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_delegacion`),
@@ -117,6 +119,7 @@ CREATE TABLE `delegacion` (
 
 LOCK TABLES `delegacion` WRITE;
 /*!40000 ALTER TABLE `delegacion` DISABLE KEYS */;
+INSERT INTO `delegacion` VALUES (1,'Coyoacán',1);
 /*!40000 ALTER TABLE `delegacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,7 +131,7 @@ DROP TABLE IF EXISTS `descuento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `descuento` (
-  `id_descuento` int(11) NOT NULL AUTO_INCREMENT,
+  `id_descuento` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_limite` date NOT NULL,
@@ -157,6 +160,8 @@ CREATE TABLE `detalleventa` (
   `id_venta` int(11) NOT NULL,
   `id_producto` int(11) NOT NULL,
   `id_descuento` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `precio` double NOT NULL,
   PRIMARY KEY (`id_venta`,`id_producto`),
   KEY `id_producto` (`id_producto`),
   KEY `id_descuento` (`id_descuento`),
@@ -183,7 +188,7 @@ DROP TABLE IF EXISTS `estado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estado` (
-  `id_estado` int(11) NOT NULL AUTO_INCREMENT,
+  `id_estado` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id_estado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -195,6 +200,7 @@ CREATE TABLE `estado` (
 
 LOCK TABLES `estado` WRITE;
 /*!40000 ALTER TABLE `estado` DISABLE KEYS */;
+INSERT INTO `estado` VALUES (1,'Ciudad de México');
 /*!40000 ALTER TABLE `estado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,10 +212,11 @@ DROP TABLE IF EXISTS `producto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `producto` (
-  `id_producto` int(11) NOT NULL AUTO_INCREMENT,
+  `id_producto` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `linea` varchar(50) NOT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
+  `precio` double NOT NULL,
   PRIMARY KEY (`id_producto`),
   KEY `id_sucursal` (`id_sucursal`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_sucursal`) REFERENCES `sucursal` (`id_sucursal`)
@@ -222,6 +229,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
+INSERT INTO `producto` VALUES (0,'Tostadora','Electrodomésticos',1,1199),(1,'Galletas','Comida',1,8.5),(2,'Papas','Comida',1,10.5),(3,'Lavadora','Electrodomésticos',1,8500),(4,'Estufa','Electrodomésticos',1,6799),(5,'Microondas','Electrodomésticos',1,2499),(6,'Tostadora','Electrodomésticos',1,1200);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -233,7 +241,7 @@ DROP TABLE IF EXISTS `sucursal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sucursal` (
-  `id_sucursal` int(11) NOT NULL AUTO_INCREMENT,
+  `id_sucursal` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `direccion` varchar(300) NOT NULL,
   `id_delegacion` int(11) DEFAULT NULL,
@@ -252,6 +260,7 @@ CREATE TABLE `sucursal` (
 
 LOCK TABLES `sucursal` WRITE;
 /*!40000 ALTER TABLE `sucursal` DISABLE KEYS */;
+INSERT INTO `sucursal` VALUES (1,'Politécnico ','Parque Centenario, Coyoacán TNT, 04000 Ciudad de México',1,1);
 /*!40000 ALTER TABLE `sucursal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -263,7 +272,7 @@ DROP TABLE IF EXISTS `tipopago`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipopago` (
-  `id_pago` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pago` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id_pago`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -312,12 +321,15 @@ DROP TABLE IF EXISTS `venta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venta` (
-  `id_venta` int(11) NOT NULL AUTO_INCREMENT,
-  `fecha` datetime NOT NULL,
+  `id_venta` int(11) NOT NULL,
+  `fecha` date NOT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
+  `id_cajero` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_venta`),
   KEY `id_sucursal` (`id_sucursal`),
-  CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`id_sucursal`) REFERENCES `sucursal` (`id_sucursal`)
+  KEY `id_cajero` (`id_cajero`),
+  CONSTRAINT `venta_ibfk_1` FOREIGN KEY (`id_sucursal`) REFERENCES `sucursal` (`id_sucursal`),
+  CONSTRAINT `venta_ibfk_2` FOREIGN KEY (`id_cajero`) REFERENCES `cajero` (`id_cajero`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -327,6 +339,7 @@ CREATE TABLE `venta` (
 
 LOCK TABLES `venta` WRITE;
 /*!40000 ALTER TABLE `venta` DISABLE KEYS */;
+INSERT INTO `venta` VALUES (1,'2016-06-01',1,NULL),(2,'2016-06-01',1,NULL),(3,'2016-05-03',1,NULL),(4,'2016-05-17',1,NULL),(5,'2016-04-03',1,NULL);
 /*!40000 ALTER TABLE `venta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -339,4 +352,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-06  6:14:21
+-- Dump completed on 2016-06-06 20:01:45
