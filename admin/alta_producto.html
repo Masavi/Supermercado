@@ -12,26 +12,29 @@
 
 		<h2><span class="fontawesome-lock"></span>Alta Producto</h2>
 
-		<form action="alta_producto.html" method="POST"> 
+		<form action="alta_producto.php" method="POST"> 
             
 			<fieldset>
-				<p><label for="nom">Nombre</label></p>
                 
-				<p><input type="text" id="nom" placeholder="No.Trabajador" name="nombre"></p>
+				<p><label for="nom">Nombre del Producto</label></p>
+				<p><input type="text" id="nom" name="nombre" style="background-color:#e6e6e6"></p>
+                
+                <p><label for="nom">Línea</label></p>
                 <select name = "linea">
-                    <option value="Blanca">Blanca</option>
-                    <option value="Comida">Comida</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Electrodomésticos">Comida</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Limpieza">Limpieza</option>
+                    <option value="Muebles">Muebles</option>
                     <option value="Ropa">Ropa</option>
-                </select>
+                    <option value="Deportes">Deportes</option>
+                </select><br><br>
                 
                 <p><label for="precio">Precio</label></p>
-                
-                <p><input type="text" id="precio" name="precio"></p>
-                
-                <p><label for="exist">Existencias</label></p>
-                <p><input type="number" id="Exi" name="exist" ></p>
+                <p><input type="text" style="background-color:#e6e6e6" id="precio" name="precio"></p>
                 
 				<p><input type="submit" value="Registrar"></p>
+                <a href="/" style="text-decoration:none"><input type="button" value="Inicio"></a>
 
 			</fieldset>
 

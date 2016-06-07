@@ -16,6 +16,7 @@
 		$db->bind(':mail', $email);
 		$db->bind(':pass', $pass);
 		$db->execute();
-		echo '<script> window.location="/"; </script>';
+        echo '<script> alert("Has agregado un cajero exitosamente.");</script>';
+		echo '<script> window.location="/admin/alta_cajero.php"; </script>';
 	}
 ?>

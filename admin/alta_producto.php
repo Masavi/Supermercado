@@ -1,19 +1,18 @@
 <?php
 
 	include "db.class.php";
-	if(isset($_POST["nombre"]) && isset($_POST["genero"]))
+    $db = new database();
+	if(isset($_POST["nombre"]) && isset($_POST["linea"]))
 	{
 		$nom = $_POST["nombre"];
-		$gen =$_POST["genero"];
-		$email = $_POST["correo"];
-		$edad = $_POST["edad"];
-		$db = new database();
-		$db->query('INSERT INTO producto(nombre,genero,edad,correo) VALUES (:fname, :genero,'.$edad.',:mail)');
+		$lin = $_POST["linea"];
+		$price = $_POST["precio"];
+        
+		$db->query('INSERT INTO producto(nombre,linea,id_sucursal,precio) VALUES (:fname, :linea, 10,'.$price.')');
 		$db->bind(':fname', $nom);
-		$db->bind(':genero', $gen);
-		//$db->bind(':edad',$edad );
-		$db->bind(':mail', $email);
+		$db->bind(':linea', $lin);
 		$db->execute();
-		echo "bien";
+        echo '<script> alert("Has agregado un producto exitosamente.");</script>';
+        echo '<script> window.location="/admin/alta_producto.html"; </script>';
 	}
 ?>
