@@ -20,8 +20,7 @@
     <a href = "/consultas/ventas_mes.php">Ventas por mes</a><br><br>
     <a href = "/consultas/ventas_cajero.php">Ventas por periodo por cajero</a><br><br>
     <a href = "/consultas/ventas_producto.php">Ventas por producto</a><br><br>
-    <a href = "/consultas/productos_masvendidos.php">Productos más vendidos</a><br><br>
-    
+    <a href = "/">Regresar a Inicio</a><br><br>   
 </div>
 </body>
 </html>

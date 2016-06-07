@@ -12,7 +12,7 @@ if (!empty($result)) {
 <table align="center" class="flat-table">
      <thead>
          <tr>
-             <th>Ventas Realizadas</th>
+             <th>Ventas Totales Realizadas</th>
          </tr>
      </thead>
 
