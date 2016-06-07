@@ -55,7 +55,8 @@
             <a href = "/admin/alta_sucursal.html">Agregar Sucursal </a><br><br>
             <a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>
             <a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>
-            <a href="/mostrarInfo.html">Realizar consultas</a>
+            <a href="/mostrarInfo.html">Realizar consultas</a><br><br>
+            <a href="/logout.php">Cerrar Sesión</a>
         </div>
     </main>
     

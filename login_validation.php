@@ -27,7 +27,6 @@
                 {
 					$_SESSION["email"] = $result['correo']; 
 					$_SESSION["nombre"] = $result['nombre'];
-					echo 'Iniciando sesión para '.$_SESSION['correo'].' <p>';
 					echo '<script> window.location="index.php"; </script>';
 				}
 				
