@@ -52,11 +52,39 @@
     
     <main>
         <div id="index">
-            <a href = "/admin/alta_sucursal.html">Agregar Sucursal </a><br><br>
-            <a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>
-            <a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>
-            <a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>
-            <a href="/logout.php">Cerrar Sesión</a>
+            
+            <?php
+                if($_SESSION['permiso']==1)
+                { 
+                echo'<a href = "/admin/alta_sucursal.html">Agregar Sucursal </a><br><br>';
+                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
+                echo'<a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href="/logout.php">Cerrar Sesión</a>';
+                }
+                else if($_SESSION['permiso']==2)
+                { 
+                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
+                echo'<a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href="/logout.php">Cerrar Sesión</a>';
+                }
+                else if($_SESSION['permiso']==3)
+                { 
+                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href="/logout.php">Cerrar Sesión</a>';
+                }
+                else if($_SESSION['permiso']==4)
+                { 
+                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
+                echo'<a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href="/logout.php">Cerrar Sesión</a>';
+                }
+            ?>
+
+            
         </div>
     </main>
     
