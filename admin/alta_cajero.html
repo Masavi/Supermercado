@@ -16,19 +16,26 @@
             
 			<fieldset>
                 <p><label for="NomSuc">Nombre</label></p>
-                <p><input type="text" id="NomSuc" name="nombre"></p>
+                <p><input type="email" id="NomSuc" name="nombre"></p>
                 
                 <p><label>Genero</label></p>
-                <p><input type="radio" name="genero" value="M">M</p>
-                <p><input type="radio" name="genero" value="F">F</p>
-                
+                    <select name="genero">
+                      <option value="M">Masculino</option>
+                      <option value="F">Femenino</option>
+                    </select>
+                <br><br>
                 <p><label for="Edad">Edad</label></p>
-                <p><input type="number" id="Edad" name="edad"/></p>
+                <p><input type="password" id="Edad" name="edad"/></p>
 
                 <p><label for="Correo">Correo</label></p>
                 <p><input type="email" id="Correo" name="correo"/></p>
+                
+                <p><label for="Contraseña">Contraseña</label></p>
+                <p><input type="password" id="Correo" name="password"/></p>
+
 
 				<p><input type="submit" value="Registrar"></p>
+                <a href="/" style="text-decoration:none"><input type="button" value="Inicio"></a>
 
 			</fieldset>
 
