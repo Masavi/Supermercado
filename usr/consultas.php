@@ -17,10 +17,10 @@
 <h1 class="titulo">Consultas</h1>
 
 <div id = cont>
-    <a href = "/admin/ventas_mes.php">Ventas por mes</a><br><br>
-    <a href = "/admin/ventas_cajero.php">Ventas por periodo por cajero</a><br><br>
-    <a href = "/admin/ventas_producto.php">Ventas por producto</a><br><br>
-    <a href = "/admin/productos_masvendidos.php">Productos más vendidos</a><br><br>
+    <a href = "/consultas/ventas_mes.php">Ventas por mes</a><br><br>
+    <a href = "/consultas/ventas_cajero.php">Ventas por periodo por cajero</a><br><br>
+    <a href = "/consultas/ventas_producto.php">Ventas por producto</a><br><br>
+    <a href = "/consultas/productos_masvendidos.php">Productos más vendidos</a><br><br>
     
 </div>
 </body>

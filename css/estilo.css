@@ -87,6 +87,7 @@ text-align: center;
 /*-------------- Este es un comentario en CSS --------------*/
 #cont{
     margin-top: 40px;
+    text-align: center;
     
 }
 
@@ -97,4 +98,8 @@ text-align: center;
 #cont table{
     margin-left: auto;
     margin-right: auto;
+}
+
+#informacion{
+    width: 100%;
 }
