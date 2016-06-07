@@ -12,6 +12,7 @@
 		$db->bind(':fname', $nom);
 		$db->bind(':linea', $lin);
 		$db->execute();
+        
         echo '<script> alert("Has agregado un producto exitosamente.");</script>';
         echo '<script> window.location="/admin/alta_producto.html"; </script>';
 	}

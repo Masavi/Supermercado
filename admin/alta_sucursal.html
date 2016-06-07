@@ -12,31 +12,32 @@
 
 		<h2><span class="fontawesome-lock"></span>Agregar Sucursal</h2>
 
-		<form action="javascript:void(0);" method="POST"> 
+		<form action="alta_sucursal.php" method="POST"> 
             
 			<fieldset>
                 
                 <p><label for="NomSuc">Nombre</label></p>
-                <p><input type="email" id="NomSuc" value="Nombre Sucursal" onBlur="if(this.value=='')this.value='NomSuc'" onFocus="if(this.value=='NomSuc')this.value=''"></p>
+                <p><input type="text" style="background-color:#e6e6e6;width:20em;" name="nombre"></p>
                 
-                <p><label for="Dir">Direccion</label></p>
-                <p><input type="email" id="Dir" value="Direccion" onBlur="if(this.value=='')this.value='Dir'" onFocus="if(this.value=='Dir')this.value=''"></p>
+                <p><label for="Dir">Dirección</label></p>
+                <p><input type="text" style="background-color:#e6e6e6;width:20em;" name="direccion"></p>
                 
                 <p><label for="Del">Delegacion</label></p>
-                <select name = "Estado">
-                    <option value="Cuajimalpa">Cuajimalpa</option>
-                    <option value="Cuahutemoc">Cuahutemoc</option>
-                    <option value="Alvaro Obregon">Alvaro Obregon</option>
-                </select>
-                
-                <p><label for="Est">Estado</label></p>
-                <select name = "Estado">
-                    <option value="Durango">Durango</option>
-                    <option value="Puebla">Puebla</option>
-                    <option value="Guadalajara">Guadalajara</option>
-                </select>
+                <select name = "delegacion">
+                    <option value="1">Coyoacán</option>
+                    <option value="2">Cuajimalpa</option>
+                    <option value="3">Álvaro Obregón</option>
+                    <option value="4">Benito Juarez</option>
+                    <option value="5">Iztacalco</option>
+                    <option value="6">Iztapalapa</option>
+                    <option value="7">Xochimilco</option>
+                    <option value="8">Tlalpan</option>
+                    <option value="9">Cuauhtémoc</option>
+                    <option value="10">Venustiano Carranza</option>
+                </select><br><br>
 
 				<p><input type="submit" value="Registrar"></p>
+                <a href="/" style="text-decoration:none"><input type="button" value="Inicio"></a>
 
 			</fieldset>
 
