@@ -12,26 +12,24 @@
 
 		<h2><span class="fontawesome-lock"></span>Alta Producto</h2>
 
-		<form action="javascript:void(0);" method="POST"> 
+		<form action="alta_producto.html" method="POST"> 
             
 			<fieldset>
-				<p><label for="email">Nombre</label></p>
+				<p><label for="nom">Nombre</label></p>
                 
-				<p><input type="email" id="email" value="No.Trabajador" onBlur="if(this.value=='')this.value='No.Trabajador'" onFocus="if(this.value=='No.Trabajador')this.value=''"></p>
-
-				<p><label for="password">Linea</label></p>
-                <select name = "Estado">
-                    <option value="Guerrero">Blanca</option>
-                    <option value="Durango">Comida</option>
-                    <option value="Veracruz">Ropa</option>
+				<p><input type="text" id="nom" placeholder="No.Trabajador" name="nombre"></p>
+                <select name = "linea">
+                    <option value="Blanca">Blanca</option>
+                    <option value="Comida">Comida</option>
+                    <option value="Ropa">Ropa</option>
                 </select>
                 
-                <p><label for="PrecioLb">Precio</label></p>
+                <p><label for="precio">Precio</label></p>
                 
-                <p><input type="email" id="password" value="Precio" onBlur="if(this.value=='')this.value='password'" onFocus="if(this.value=='password')this.value=''"></p>
+                <p><input type="text" id="precio" name="precio"></p>
                 
-                <p><label for="ExistenciasLb">Existencias</label></p>
-                <p><input type="email" id="Exi" value="Existencias" onBlur="if(this.value=='')this.value='Exi'" onFocus="if(this.value=='Exi')this.value=''"></p>
+                <p><label for="exist">Existencias</label></p>
+                <p><input type="number" id="Exi" name="exist" ></p>
                 
 				<p><input type="submit" value="Registrar"></p>
 

@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `caja`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `caja` (
-  `id_caja` int(11) NOT NULL,
+  `id_caja` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_caja` varchar(50) NOT NULL,
   `id_cajero` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_caja`),
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `cajero`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cajero` (
-  `id_cajero` int(11) NOT NULL,
+  `id_cajero` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(200) NOT NULL,
   `genero` char(1) NOT NULL,
   `edad` int(3) NOT NULL,
@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS `corporativo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `corporativo` (
-  `id_corporativo` int(11) NOT NULL,
+  `id_corporativo` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `direccion` varchar(300) NOT NULL,
   PRIMARY KEY (`id_corporativo`)
@@ -102,7 +102,7 @@ DROP TABLE IF EXISTS `delegacion`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `delegacion` (
-  `id_delegacion` int(11) NOT NULL,
+  `id_delegacion` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `id_estado` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_delegacion`),
@@ -128,7 +128,7 @@ DROP TABLE IF EXISTS `descuento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `descuento` (
-  `id_descuento` int(11) NOT NULL,
+  `id_descuento` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_limite` date NOT NULL,
@@ -183,7 +183,7 @@ DROP TABLE IF EXISTS `estado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estado` (
-  `id_estado` int(11) NOT NULL,
+  `id_estado` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id_estado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -206,7 +206,7 @@ DROP TABLE IF EXISTS `producto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `producto` (
-  `id_producto` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `linea` varchar(50) NOT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
@@ -233,7 +233,7 @@ DROP TABLE IF EXISTS `sucursal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sucursal` (
-  `id_sucursal` int(11) NOT NULL,
+  `id_sucursal` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `direccion` varchar(300) NOT NULL,
   `id_delegacion` int(11) DEFAULT NULL,
@@ -263,7 +263,7 @@ DROP TABLE IF EXISTS `tipopago`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipopago` (
-  `id_pago` int(11) NOT NULL,
+  `id_pago` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id_pago`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -312,7 +312,7 @@ DROP TABLE IF EXISTS `venta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venta` (
-  `id_venta` int(11) NOT NULL,
+  `id_venta` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` datetime NOT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_venta`),
