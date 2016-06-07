@@ -27,6 +27,7 @@
                 {
 					$_SESSION["email"] = $result['correo']; 
 					$_SESSION["nombre"] = $result['nombre'];
+                    $_SESSION["cargo"] = $result['cargo'];
 					echo '<script> window.location="index.php"; </script>';
 				}
 				

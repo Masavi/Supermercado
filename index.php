@@ -8,7 +8,7 @@
     
 <head>
 	<meta charset="utf-8">
-	<title>¡Bienvenido al Sistema!</title>
+	<title>Inicio</title>
 	<link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
     
@@ -46,7 +46,7 @@
     
     <header>
         <div id="header">
-            <h1>¡Bienvenido!</h1><br>
+            <h1>¡Hola <?php echo $_SESSION["nombre"];?>!</h1><br>
         </div>
     </header>
     
@@ -55,7 +55,7 @@
             <a href = "/admin/alta_sucursal.html">Agregar Sucursal </a><br><br>
             <a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>
             <a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>
-            <a href="/mostrarInfo.html">Realizar consultas</a><br><br>
+            <a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>
             <a href="/logout.php">Cerrar Sesión</a>
         </div>
     </main>
