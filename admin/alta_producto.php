@@ -14,6 +14,6 @@
 		$db->execute();
         
         echo '<script> alert("Has agregado un producto exitosamente.");</script>';
-        echo '<script> window.location="/admin/alta_producto.html"; </script>';
+        echo '<script> window.location="/admin/agregar_producto.php"; </script>';
 	}
 ?>

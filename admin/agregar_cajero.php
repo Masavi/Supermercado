@@ -1,3 +1,8 @@
+<?php
+	session_start();
+    if( (isset($_SESSION['permiso'])) && ( ($_SESSION['permiso']==1) || ($_SESSION['permiso']==2) ) ){ 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     
@@ -32,7 +37,30 @@
                 
                 <p><label for="Contraseña">Contraseña</label></p>
                 <p><input type="password" style="background-color:#e6e6e6" name="password">
-                <br><br>
+                
+                <?php
+                    if($_SESSION['permiso']==1)
+                    { 
+                        echo '<p><label>Permisos de Sistema</label></p>';
+                        echo '    <select name="permiso">';
+                        echo '      <option value="1">Administrador</option>';
+                        echo '      <option value="2">Agregar Productos y Cajeros</option>';
+                        echo '      <option value="3">Agregar Cajeros</option>';
+                        echo '      <option value="4">Sólo Consultas</option>';
+                        echo '    </select>';
+                        echo '<br><br>';
+                    }
+                    else if($_SESSION['permiso']==2)
+                    { 
+                        echo '<p><label>Permisos de Sistema</label></p>';
+                        echo '    <select name="permiso">';
+                        echo '      <option value="2">Agregar Productos y Cajeros</option>';
+                        echo '      <option value="3">Agregar Cajeros</option>';
+                        echo '      <option value="4">Sólo Consultas</option>';
+                        echo '    </select>';
+                        echo '<br><br>';
+                    }
+                ?>
 
 				<p><input type="submit" value="Registrar"></p><br>
                 <div style="text-align:center">
@@ -46,3 +74,9 @@
 	</div>
 </body>	
 </html>
+
+<?php
+}else{
+  echo '<script> window.location="/"; </script>';
+}
+?>

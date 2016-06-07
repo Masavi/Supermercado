@@ -8,9 +8,10 @@
 		$gen =$_POST["genero"];
 		$email = $_POST["correo"];
 		$edad = $_POST["edad"];
+        $perm = $_POST["permiso"];
         $pass = $_POST["password"];
         
-		$db->query('INSERT INTO cajero(nombre,genero,edad,correo,pass) VALUES (:fname, :genero,'.$edad.',:mail ,:pass)');
+		$db->query('INSERT INTO cajero(nombre,genero,edad,correo,pass,permiso) VALUES (:fname, :genero,'.$edad.',:mail ,:pass,'.$perm.')');
 		$db->bind(':fname', $nom);
 		$db->bind(':genero', $gen);
 		$db->bind(':mail', $email);
@@ -18,6 +19,6 @@
 		$db->execute();
         
         echo '<script> alert("Has agregado un cajero exitosamente.");</script>';
-		echo '<script> window.location="/admin/alta_cajero.html"; </script>';
+		echo '<script> window.location="/admin/agregar_cajero.php"; </script>';
 	}
 ?>

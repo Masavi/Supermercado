@@ -56,34 +56,31 @@
             <?php
                 if($_SESSION['permiso']==1)
                 { 
-                echo'<a href = "/admin/alta_sucursal.html">Agregar Sucursal </a><br><br>';
-                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
-                echo'<a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href = "/admin/agregar_sucursal.php">Agregar Sucursal </a><br><br>';
+                echo'<a href = "/admin/agregar_producto.php">Agregar Producto</a><br><br>';
+                echo'<a href="/admin/agregar_cajero.php">Agregar Cajero</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
                 else if($_SESSION['permiso']==2)
                 { 
-                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
-                echo'<a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href = "/admin/agregar_producto.php">Agregar Producto</a><br><br>';
+                echo'<a href="/admin/agregar_cajero.php">Agregar Cajero</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
                 else if($_SESSION['permiso']==3)
                 { 
-                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href = "/admin/agregar_producto.php">Agregar Producto</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
                 else if($_SESSION['permiso']==4)
                 { 
-                echo'<a href = "/admin/alta_producto.html">Agregar Producto</a><br><br>';
-                echo'<a href="/admin/alta_cajero.html">Agregar Cajero</a><br><br>';
-                echo'<a href="/usr/mostrarInfo.html">Realizar consultas</a><br><br>';
+                echo'<a href="/usr/mostrarInfo.php">Realizar consultas</a><br><br>';
                 echo'<a href="/logout.php">Cerrar Sesión</a>';
                 }
             ?>
-
             
         </div>
     </main>

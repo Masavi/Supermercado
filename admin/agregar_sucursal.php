@@ -1,3 +1,8 @@
+<?php
+	session_start();
+    if((isset($_SESSION['permiso'])) && ($_SESSION['permiso']==1)){ 
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     
@@ -48,3 +53,9 @@
 	</div>
 </body>	
 </html>
+
+<?php
+}else{
+  echo '<script> window.location="/"; </script>';
+}
+?>
